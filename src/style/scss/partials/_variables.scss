@@ -1,0 +1,49 @@
+//! ------------------------------------------------reset------------------------------------------------
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+//! ------------------------------------------------colours------------------------------------------------
+$bg-color: whitesmoke;
+$black-color: rgb(31, 31, 31);
+$white-color: rgb(242, 242, 242);
+$grey-color: rgb(232, 232, 232);
+
+//! ------------------------------------------------padding------------------------------------------------
+
+$allPadding: (
+  "xx-small": 0.25rem,
+  "x-small": 0.5rem,
+  "small": 1rem,
+  "medium": 1.5rem,
+  "large": 2rem,
+  "x-large": 3rem,
+  "xx-large": 4rem,
+  "xxx-large": 5rem,
+);
+
+@function getPadding($paddingName) {
+  @return map-get($allPadding, $paddingName);
+}
+
+//! ------------------------------------------------margin------------------------------------------------
+
+$allMargin: (
+  "xx-small": 0.25rem,
+  "x-small": 0.5rem,
+  "small": 1rem,
+  "medium": 1.5rem,
+  "large": 2rem,
+  "x-large": 3rem,
+  "xx-large": 4rem,
+  "xxx-large": 5rem,
+);
+
+@function getMargin($marginName) {
+  @return map-get($allMargin, $marginName);
+}
