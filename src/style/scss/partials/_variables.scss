@@ -1,13 +1,4 @@
-//! ------------------------------------------------reset------------------------------------------------
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none;
-}
+
 //! ------------------------------------------------colours------------------------------------------------
 $bg-color: whitesmoke;
 $black-color: rgb(31, 31, 31);
