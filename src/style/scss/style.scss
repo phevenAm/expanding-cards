@@ -1,4 +1,4 @@
-@import "./partials/variables";
+@import "./partials/variables", "./partials/customStyles", "./partials/reset";
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
@@ -14,27 +14,45 @@ body {
 }
 
 .active {
-  flex: 0.8 !important;
+  flex: 1  !important;
+  @include shadow;
+
+
+
+    h2{
+      opacity: 1 !important;
+      transition: opacity 250ms ease-in-out .2s;
+    }
+
 }
 
 .container {
-  width: 100vw;
+  width: 95vw;
   height: 50vh;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: getPadding(large);
   background: $grey-color;
+    border-radius: 5px;
+  @include shadow;
+
+
+
+
   .panel {
+    color: white;
     padding: getPadding(large);
     margin: getMargin(x-small) !important;
     cursor: pointer;
-    flex: 0.2;
+    // flex: 0.2; //!this was breaking it because the panels had a min with of .2 flex - looked terrible on small screens
     margin: 0.25rem;
-
     position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-repeat: no-repeat ;
+    background-position: center;
+    transition: all 250ms ease-in-out !important;
+    border-radius: 5px;
 
     h2 {
       padding: getPadding(small) !important;
@@ -43,6 +61,7 @@ body {
       left: 0;
       color: $white-color;
       font-size: 1.2rem;
+      opacity: 0;
     }
   }
 }
@@ -70,4 +89,21 @@ body {
 .panel:nth-child(6) {
   background: red;
   background: url("https://images.pexels.com/photos/4594030/pexels-photo-4594030.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+}
+
+
+@media (max-width: 568px) {
+
+  .container{
+      width: 95vw;
+      height: 80vh;
+      flex-direction: column;
+        justify-content: space-evenly;
+  flex-wrap: nowrap;
+  }
+  
+
+  // .panel:nth-child(6), .panel:nth-child(5), .panel:nth-child(4){
+  //   display: none;
+  // }
 }
