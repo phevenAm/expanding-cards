@@ -46,7 +46,8 @@ body {
     padding: getPadding(large);
     margin: getMargin(x-small) !important;
     cursor: pointer;
-    // flex: 0.2; //!this was breaking it because the panels had a min with of .2 flex - looked terrible on small screens
+    // flex: 0.2; 
+    //!this was breaking it because the panels had a min with of .2 flex - looked terrible on small screens
     margin: 0.25rem;
     position: relative;
     background-size: cover !important;
